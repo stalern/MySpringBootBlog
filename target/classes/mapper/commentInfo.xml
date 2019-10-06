@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--命名空间指的是该xml指向的持久层的类-->
+<mapper namespace="cn.zi10ng.blog.dao.CommentInfoMapper">
+
+    <!--<update id="updateCommentInfo" parameterType="cn.zi10ng.blog.domain.CommentInfo">-->
+        <!--update comment_info set id = #{id}-->
+        <!--<if test="content != null">-->
+            <!--,content = #{content}-->
+        <!--</if>-->
+        <!--<if test="connect != null">-->
+            <!--,connect = #{connect}-->
+        <!--</if>-->
+        <!--<if test="name != null">-->
+            <!--,name = #{name}-->
+        <!--</if>-->
+        <!--where id = #{id}-->
+    <!--</update>-->
+
+    <insert id="insertCommentInfo" parameterType="cn.zi10ng.blog.domain.CommentInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into comment_info (content,  parent_id)
+        values (#{content}, #{parentId});
+    </insert>
+</mapper>

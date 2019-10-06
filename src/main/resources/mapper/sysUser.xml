@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--命名空间指的是该xml指向的持久层的类-->
+<mapper namespace="cn.zi10ng.blog.dao.SysUserMapper">
+
+    <insert id="postUser" parameterType="cn.zi10ng.blog.domain.SysUser">
+        INSERT INTO sys_user(
+          role ,
+          browser ,
+          region,
+          ip)
+        VALUES(
+            #{role} ,
+            #{browser} ,
+            #{region},
+            #{ip})
+        ON DUPLICATE KEY UPDATE
+        <if test="name != null">
+            name = #{name},
+            connect = #{connect},
+            role = #{role}
+        </if>
+        <if test="name == null">
+            num = num + 1
+        </if>
+    </insert>
+
+</mapper>

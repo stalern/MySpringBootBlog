@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--命名空间指的是该xml指向的持久层的类-->
+<!--这个可能不能用了-->
+<mapper namespace="cn.zi10ng.blog.dao.CategoryInfoMapper">
+
+    <insert id="insertCategoryInfo" parameterType="cn.zi10ng.blog.domain.CategoryInfo">
+        insert into category_info(name
+        <if test="parentId != null">
+            ,parent_id
+        </if>
+        ) values(#{name}
+        <if test="parentId != null">
+            ,#{parentId}
+        </if>
+        );
+    </insert>
+
+    <update id="updateCategoryInfo" parameterType="cn.zi10ng.blog.domain.CategoryInfo">
+        update category_info set id = #{id}
+        <if test="name != null">
+            ,name = #{name}
+        </if>
+        <if test="parentId != null">
+            ,parent_id = #{parentId}
+        </if>
+        <if test="number != null">
+            ,number = #{number}
+        </if>
+         where id = #{id};
+    </update>
+</mapper>
