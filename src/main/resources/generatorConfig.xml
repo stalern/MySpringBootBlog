@@ -18,7 +18,7 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/world?useSSL=false&amp;serverTimezone=Hongkong&amp;characterEncoding=utf-8&amp;autoReconnect=true"
                         userId="root"
-                        password="2267017560">
+                        password="root">
         </jdbcConnection>
 
         <!--生成pojo类存放位置-->
