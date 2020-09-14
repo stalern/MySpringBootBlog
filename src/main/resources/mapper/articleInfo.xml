@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--命名空间指的是该xml指向的持久层的类-->
-<mapper namespace="cn.zi10ng.blog.dao.ArticleInfoMapper">
+<mapper namespace="cn.wxxlamp.blog.dao.ArticleInfoMapper">
 
-    <update id="updateArticleInfo" parameterType="cn.zi10ng.blog.domain.ArticleInfo">
+    <update id="updateArticleInfo" parameterType="cn.wxxlamp.blog.domain.ArticleInfo">
         update article_info set id = #{id}
         <if test="title != null">
             ,title = #{title}
@@ -23,7 +23,7 @@
         where id = #{id}
     </update>
 
-    <insert id="insertArticleInfo" parameterType="cn.zi10ng.blog.domain.ArticleInfo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertArticleInfo" parameterType="cn.wxxlamp.blog.domain.ArticleInfo" useGeneratedKeys="true" keyProperty="id">
         insert into article_info (title, summary) values (#{title}, #{summary})
     </insert>
 </mapper>

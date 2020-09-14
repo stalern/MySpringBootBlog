@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--命名空间指的是该xml指向的持久层的类-->
-<mapper namespace="cn.zi10ng.blog.dao.SysUserMapper">
+<mapper namespace="cn.wxxlamp.blog.dao.SysUserMapper">
 
-    <insert id="postUser" parameterType="cn.zi10ng.blog.domain.SysUser">
+    <insert id="postUser" parameterType="cn.wxxlamp.blog.domain.SysUser">
         INSERT INTO sys_user(
           role ,
           browser ,

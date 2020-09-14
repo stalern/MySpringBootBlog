@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--命名空间指的是该xml指向的持久层的类-->
-<mapper namespace="cn.zi10ng.blog.dao.ArticleContentMapper">
+<mapper namespace="cn.wxxlamp.blog.dao.ArticleContentMapper">
 
-    <update id="updateArticleContent" parameterType="cn.zi10ng.blog.domain.ArticleContent">
+    <update id="updateArticleContent" parameterType="cn.wxxlamp.blog.domain.ArticleContent">
         update article_content set article_id = #{articleId}
         <if test="content!=null">
             ,content = #{content}

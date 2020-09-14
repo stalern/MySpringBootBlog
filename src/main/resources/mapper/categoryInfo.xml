@@ -5,9 +5,9 @@
 
 <!--命名空间指的是该xml指向的持久层的类-->
 <!--这个可能不能用了-->
-<mapper namespace="cn.zi10ng.blog.dao.CategoryInfoMapper">
+<mapper namespace="cn.wxxlamp.blog.dao.CategoryInfoMapper">
 
-    <insert id="insertCategoryInfo" parameterType="cn.zi10ng.blog.domain.CategoryInfo">
+    <insert id="insertCategoryInfo" parameterType="cn.wxxlamp.blog.domain.CategoryInfo">
         insert into category_info(name
         <if test="parentId != null">
             ,parent_id
@@ -19,7 +19,7 @@
         );
     </insert>
 
-    <update id="updateCategoryInfo" parameterType="cn.zi10ng.blog.domain.CategoryInfo">
+    <update id="updateCategoryInfo" parameterType="cn.wxxlamp.blog.domain.CategoryInfo">
         update category_info set id = #{id}
         <if test="name != null">
             ,name = #{name}

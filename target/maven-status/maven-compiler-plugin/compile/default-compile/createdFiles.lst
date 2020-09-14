@@ -29,10 +29,12 @@ cn\zi10ng\blog\domain\ArticleInfo.class
 cn\zi10ng\blog\service\SysLogService.class
 cn\zi10ng\blog\util\Object2Special.class
 cn\zi10ng\blog\BlogApplication.class
+cn\zi10ng\blog\util\CompositeUtils.class
 cn\zi10ng\blog\domain\ArticlePicture.class
 cn\zi10ng\blog\util\Md5Utils.class
 cn\zi10ng\blog\domain\ArticleComment.class
 cn\zi10ng\blog\service\CategoryInfoService.class
+cn\zi10ng\blog\util\CompositeUtils$Node.class
 cn\zi10ng\blog\aop\SysLogAspect.class
 cn\zi10ng\blog\dao\CommentInfoMapper.class
 cn\zi10ng\blog\dao\SysUserMapper.class
@@ -46,5 +48,4 @@ cn\zi10ng\blog\util\OperateByUtils.class
 cn\zi10ng\blog\dao\ArticleLoverMapper.class
 cn\zi10ng\blog\domain\ArticleInfoCategory.class
 cn\zi10ng\blog\service\impl\ArticleServiceImpl.class
-cn\zi10ng\blog\aop\ArticleViews.class
 cn\zi10ng\blog\service\impl\CommentServiceImpl.class

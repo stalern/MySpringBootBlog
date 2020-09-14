@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--命名空间指的是该xml指向的持久层的类-->
-<mapper namespace="cn.zi10ng.blog.dao.CommentInfoMapper">
+<mapper namespace="cn.wxxlamp.blog.dao.CommentInfoMapper">
 
-    <!--<update id="updateCommentInfo" parameterType="cn.zi10ng.blog.domain.CommentInfo">-->
+    <!--<update id="updateCommentInfo" parameterType="CommentInfo">-->
         <!--update comment_info set id = #{id}-->
         <!--<if test="content != null">-->
             <!--,content = #{content}-->
@@ -20,7 +20,7 @@
         <!--where id = #{id}-->
     <!--</update>-->
 
-    <insert id="insertCommentInfo" parameterType="cn.zi10ng.blog.domain.CommentInfo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertCommentInfo" parameterType="cn.wxxlamp.blog.domain.CommentInfo" useGeneratedKeys="true" keyProperty="id">
         insert into comment_info (content,  parent_id)
         values (#{content}, #{parentId});
     </insert>
